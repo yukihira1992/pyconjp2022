@@ -4,13 +4,12 @@ from pylint.typing import MessageDefinitionTuple, Options
 
 
 class NestedIfChecker(BaseChecker):
-    MAX_NEST_LEVEL = 3
     name = "nested-if-checker"
     msgs: dict[str, MessageDefinitionTuple] = {
         "E9902": (
             "if statements nested too much",
             "too-nested-if",
-            "if statements should be nested no more than 3 times",
+            "if statements should be nested too much",
         ),
     }
     options: Options = (
